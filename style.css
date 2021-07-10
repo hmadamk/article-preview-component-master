@@ -1,0 +1,181 @@
+*{
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box
+}
+body{
+	margin:0;
+	background:hsl(210, 46%, 95%);
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh;
+	font-family: 'Manrope', sans-serif;
+}
+.container{
+	background:#fff;
+	width:60vw;
+	display:flex;
+	border-radius:10px;
+}
+.container > img{
+	width:40%;
+	border-radius:10px 0 0 10px;
+}
+.content > p{
+	color:#777;
+}
+.bold{
+	font-weight:bold;
+}
+.container .content{
+	padding:35px;
+}
+.container h2{
+	margin-top:0;
+}
+.foot{
+	overflow:hidden;
+}
+.box{
+	display:flex;
+	align-items:center;
+	float:left;
+}
+.box p{
+	margin:0;
+}
+.box img{
+	width:50px;
+	border-radius:50%;
+}
+.text{
+	margin-left:20px;
+}
+.text span{
+	color:#777;
+}
+.share{
+	float:right;
+	margin-top:5px;
+
+}
+.share > img{
+	background:#ddd;
+	padding:15px;
+	border-radius:50%;
+	cursor:pointer;
+	width:50px;
+}
+.active img{
+	background:#6E8098;
+}
+.pop{
+	position:absolute;
+	background:hsl(217, 19%, 35%);
+	border-radius:10px;
+	margin-top:-70px;
+	margin-left:-80px;
+	padding:15px;
+}
+.pop span{
+	letter-spacing:3px;
+	text-transform:uppercase;
+	margin-inline:15px;
+	color:#aaa;
+}
+.pop img{
+	margin-inline:3px;
+	margin-bottom:-5px;
+}
+.triangle {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  
+  border-top: 10px solid hsl(217, 19%, 35%);
+  position:absolute;
+  left:50%;
+  transform:translate(-50%,0);
+  bottom:-9px;
+}
+@media (max-width:991px){
+	h2{
+		font-size:1.5rem;
+	}
+	.container{
+		flex-direction:column;
+		margin-top:40px;
+		margin-bottom:40px;
+		width:90vw;
+	}
+	.container .content{
+		padding:20px;
+		padding-bottom:0;
+		position:relative;
+	}
+	.container > img{
+		width:100%;
+		border-radius:10px 10px 0 0;
+	}
+	.triangle{
+		display:none;
+	}
+	.share{
+		position:absolute;
+		left:0;
+		right:0;
+		background:hsl(217, 19%, 35%);
+		border-radius:0 0 10px 10px;
+		padding:5px;
+		padding-inline:15px;
+	}
+	.share > img{
+		float:right;
+	}
+	.pop{
+		position:static;
+		margin:0;
+		float:left;
+	}
+	.pop span{
+		letter-spacing:3px;
+		text-transform:uppercase;
+		margin-inline:15px;
+		color:#aaa;
+	}
+	.pop img{
+		margin-inline:3px;
+		margin-bottom:-5px;
+	}
+	.share > img{
+		padding:10px;
+		width:40px;
+	}
+	.foot{
+		margin-bottom:15px;
+	}
+	.share.show{
+		float:right;
+		position:static;
+		background:none;
+	}
+	.show .pop{
+		display:none;
+	}
+	.share:not(.show) > img{
+		margin-right:10px;
+		margin-top:9px;
+		margin-bottom:9px;
+	}
+	.share:not(.show){
+		padding:0;
+	}
+	.pop span{
+		margin-left:0;
+	}
+}
+.hide{
+	display:none;
+}
